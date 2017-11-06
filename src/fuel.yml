@@ -1,0 +1,33 @@
+##     ## ##    ## #### ######## ##    ##     ######   ######## ##    ##
+##     ## ###   ##  ##     ##     ##  ##     ##    ##  ##       ###   ##
+##     ## ####  ##  ##     ##      ####      ##        ##       ####  ##
+##     ## ## ## ##  ##     ##       ##       ##   #### ######   ## ## ##
+##     ## ##  ####  ##     ##       ##       ##    ##  ##       ##  ####
+##     ## ##   ###  ##     ##       ##       ##    ##  ##       ##   ###
+ #######  ##    ## ####    ##       ##        ######   ######## ##    ##
+
+                   # DEVELOPED BY CHAZMONDO #
+                   # PLUGINWIKI.IO/UNITYGEN #
+
+                   # FUEL.YML FILE SETTINGS #
+
+# - Note -
+# Fuel can only be applied to generators
+# that have not already expired
+# - Note -
+
+fuel:
+    Flammable:
+        item:
+          name: '&4Flammable &cFuel'
+          lore:
+          - '&7Right click onto an expiring generator,'
+          - '&7and it will last longer!'
+          item: TRIPWIRE_HOOK
+          data: 0
+        setting:
+          remove-on-use: true
+          enabled: true
+          applicable:
+          - ALL
+          add-time: 30 # How long (in seconds) to add to generator

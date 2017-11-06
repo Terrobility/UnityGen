@@ -1,0 +1,43 @@
+message:
+    noPermission: "&4&lUNITY &c&lGEN &8> &7No permission to do that!"
+    noArgs: "&4&lUNITY &c&lGEN &8> &7Invalid Arguments!"
+    reload: "&4&lUNITY &c&lGEN &8> &7Reloaded Configuration!"
+    noPlayer: "&4&lUNITY &c&lGEN &8> &7That player was not found!"
+    givenGenerator: "&4&lUNITY &c&lGEN &8> &7Given &c%player% &7%amount%x %generator%"
+    invalidGenerator: "&4&lUNITY &c&lGEN &8> &7Sorry, &c%generator% &7is invalid generator"
+    recieved: "&4&lUNITY &c&lGEN &8> &7Recieved &7%amount%x %generator% generator"
+    placedGenerator: "&4&lUNITY &c&lGEN &8> &7Placed a(n) &c%generator% &7generator"
+    removedGenerator: "&4&lUNITY &c&lGEN &8> &7Removed a(n) &c%generator% &7generator"
+    noPermissionGen: "&4&lUNITY &c&lGEN &8> &7No permission to use a(n) &c%generator%"
+    cannotMine: "&4&lUNITY &c&lGEN &8> &7Shift + Right Click &7to obtain your generator"
+    notYourGen: "&4&lUNITY &c&lGEN &8> &7This generator belongs to &c%player%"
+    givenAllGenerator: "&4&lUNITY &c&lGEN &8> &7Given &4%online%x &7players, &b%amount%x &c%generator%&7!"
+    limitReached: "&4&lUNITY &c&lGEN &8> &7Generator Limit of &c%limit% &7reached"
+    cannotDoubleChest: "&4&lUNITY &c&lGEN &8> &7Generators cannot be &cDouble Chests"
+    tellPlayerMessage: "&4&lUNITY &c&lGEN &8> &7Your &c&l%tier% &7generator is full!"
+    tellPlayerGenMessage: "&4&lUNITY &c&l%tier% &8> &7Generated %amount%x %item%!"
+    noCommandFound: "&4&lUNITY &c&lGEN &8> &7That command was not found!"
+command-message:
+    help:
+    - ''
+    - '&4&lUnity&c&lGen'
+    - ''
+    - '&c/ug &8- &fMain Command'
+    - '&c/ug reload &8- &fReload Configuration'
+    - '&c/ug list &8- &fList Generators'
+    - '&c/ug give <player> <generator> [amount] &8- &fGive <player> [amount]x <generator>'
+    - '&c/ug giveall <generator> [amount] &8- &fGive-all online [amount]x <generator>'
+    - '&c/ug version &8- &fUnityGen Version'
+    - ''
+    list:
+    - ''
+    - '&4Available Generators'
+    - '&8> &c%list%'
+    - ''
+    listJoiner: '&7, &c'
+    version:
+    - ''
+    - '&4&lUnity&c&lGen'
+    - ''
+    - '&7Running Version &c%version%'
+    - ''

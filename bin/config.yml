@@ -1,0 +1,105 @@
+##     ## ##    ## #### ######## ##    ##     ######   ######## ##    ## 
+##     ## ###   ##  ##     ##     ##  ##     ##    ##  ##       ###   ## 
+##     ## ####  ##  ##     ##      ####      ##        ##       ####  ## 
+##     ## ## ## ##  ##     ##       ##       ##   #### ######   ## ## ## 
+##     ## ##  ####  ##     ##       ##       ##    ##  ##       ##  #### 
+##     ## ##   ###  ##     ##       ##       ##    ##  ##       ##   ### 
+ #######  ##    ## ####    ##       ##        ######   ######## ##    ## 
+ 
+                   # DEVELOPED BY CHAZMONDO #
+
+generator:
+    ChestGen:
+        name: "&4&lCHEST-GEN &cGenerator"
+        lore:
+        - '&4> &7Interval: &c%time%'
+        item:
+        # "ITEM_ID:DATA:AMOUNT:CHANCE"
+        - "COBBLESTONE:0:10:70"
+        - "STONE:0:10:30"
+        block: CHEST
+        time: 3 # how long in seconds it takes to generate
+        permission: '' # set to '' to disable
+        generatorSound:
+            # Please use https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+            # for 1.9 sounds.  
+            # Wish to use 1.8? Use these for sounds:
+            # https://jd.bukkit.org/org/bukkit/Sound.html 
+            # Don't want any sound? Set sound to ''
+            sound: ''
+            pitch: 2
+            volume: 2
+        hologram:
+        - '&c&l%player%''s &fGenerator'
+        - '&fType &8> &4%type%'
+        - '&fInterval &8> &4%time%'
+        
+    DiamondGen:
+        name: "&5&lDIAMOND-GEN &dGenerator"
+        lore:
+        - '&5> &7Interval: &d%time%'
+        item:
+        - "DIAMOND:0:1:50"
+        block: DIAMOND_BLOCK
+        time: 5 # how long in seconds it takes to generate
+        permission: '' # set to '' to disable
+        generatorSound:
+            # Please use https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+            # for 1.9 sounds.  
+            # Wish to use 1.8? Use these for sounds:
+            # https://jd.bukkit.org/org/bukkit/Sound.html 
+            # Don't want any sound? Set sound to ''
+            sound: ''
+            pitch: 2
+            volume: 2
+            
+            
+general:
+    # Height of Hologram
+    hologramHeight: 3
+    
+    # Permission-based Limits
+    # Permission - unitygen.limit.x
+    # Unlimited? Set to -1 or permission unitygen.limit.bypass
+    limit:
+        default: 5
+        donator: 10
+        staff: -1      
+    # Where should the item go on break?
+    # TRUE - Item will drop on Floor
+    # FALSE - Item will go into Players Inventory
+    # IF INVENTORY IS FULL, IT WILL DROP ON FLOOR!  
+    generatorItemDrop: true
+    
+    # Do you wish to allow Generators to be Double Chests?
+    allowDoubleChest: false
+    tellPlayerWhenFull: true
+    tellPlayerOnGeneration: true
+    
+    # Items specified below will stop the generator being removed on interact 
+    # - Such as a SIGN, useful for Chest-Shops -
+    allowed-item:
+    - SIGN
+    noPermission: "&4&lUNITY &c&lGEN &8> &7No permission to do that!"
+    noArgs: "&4&lUNITY &c&lGEN &8> &7Invalid Arguments!"
+    reload: "&4&lUNITY &c&lGEN &8> &7Reloaded Configuration!"
+    noPlayer: "&4&lUNITY &c&lGEN &8> &7That player was not found!"
+    givenGenerator: "&4&lUNITY &c&lGEN &8> &7Given &c%player% &7%amount%x %generator%"
+    invalidGenerator: "&4&lUNITY &c&lGEN &8> &7Sorry, &c%generator% &7is invalid generator"
+    recieved: "&4&lUNITY &c&lGEN &8> &7Recieved &7%amount%x %generator% generator"
+    placedGenerator: "&4&lUNITY &c&lGEN &8> &7Placed a(n) &c%generator% &7generator"
+    removedGenerator: "&4&lUNITY &c&lGEN &8> &7Removed a(n) &c%generator% &7generator"
+    noPermissionGen: "&4&lUNITY &c&lGEN &8> &7No permission to use a(n) &c%generator%"
+    cannotMine: "&4&lUNITY &c&lGEN &8> &7Shift + Right Click &7to obtain your generator"
+    notYourGen: "&4&lUNITY &c&lGEN &8> &7This generator belongs to &c%player%"
+    givenAllGenerator: "&4&lUNITY &c&lGEN &8> &7Given &4%online%x &7players, &b%amount%x &c%generator%&7!"
+    limitReached: "&4&lUNITY &c&lGEN &8> &7Generator Limit of &c%limit% &7reached"
+    cannotDoubleChest: "&4&lUNITY &c&lGEN &8> &7Generators cannot be &cDouble Chests"
+    tellPlayerMessage: "&4&lUNITY &c&lGEN &8> &7Your &c&l%tier% &7generator is full!"
+    tellPlayerGenMessage: "&4&lUNITY &c&l%tier% &8> &7Generated %amount%x %item%!"
+    
+    listCommand:
+    - ''
+    - '&4&lUNITY &c&lGEN &8> &7Gens: &c%list%'
+    - ''
+    listJoiner: '&7, &c'

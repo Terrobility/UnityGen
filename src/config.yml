@@ -1,0 +1,138 @@
+##     ## ##    ## #### ######## ##    ##     ######   ######## ##    ##
+##     ## ###   ##  ##     ##     ##  ##     ##    ##  ##       ###   ##
+##     ## ####  ##  ##     ##      ####      ##        ##       ####  ##
+##     ## ## ## ##  ##     ##       ##       ##   #### ######   ## ## ##
+##     ## ##  ####  ##     ##       ##       ##    ##  ##       ##  ####
+##     ## ##   ###  ##     ##       ##       ##    ##  ##       ##   ###
+ #######  ##    ## ####    ##       ##        ######   ######## ##    ##
+ 
+                   # DEVELOPED BY CHAZMONDO #
+                   # PLUGINWIKI.IO/UNITYGEN #
+
+generator:
+    Basic:
+        enabled: true
+        name: "&cBasic &7Gen"
+        alias: '&c&lBasic Gen &8(&4&lI&8}&7'
+        lore:
+        - '&7Place!'
+        item:
+            '1':
+               type: ITEM
+               name: '&3Cobblestone'
+               lore:
+               - '&7Generated from Basic Gen!'
+               material: DIAMOND
+               data: 0
+               amount: 1
+               chance: 50
+            '2':
+               type: ITEM
+               name: '&fBlue Wool'
+               lore: ''
+               material: WOOL
+               data: 5
+               amount: 3
+               chance: 50
+        block: CHEST
+        time: 5
+        expire: -1 # (In Seconds) # Set to -1 to not expire
+        permission: '' # set to '' to disable
+        generatorSound:
+            sound: ''
+            pitch: 2
+            volume: 2
+        hologram:
+        - '&3&l%player%''s &bGenerator'
+        - '&fTier: &f%type%'
+        - '&fGenerates every &b%time% &fseconds!'
+        - '&fThis generator will not expire!'
+    Deluxe:
+        enabled: true
+        name: "&cDeluxe &7Gen"
+        lore:
+        - '&7Place!'
+        item:
+            '1':
+               type: ITEM
+               name: '&3Cobblestone'
+               lore:
+               - '&7Generated from Basic Gen!'
+               material: DIAMOND
+               data: 0
+               amount: 1
+               chance: 50
+            '2':
+               type: ITEM
+               name: '&fBlue Wool'
+               lore: ''
+               material: WOOL
+               data: 5
+               amount: 3
+               chance: 50
+        block: CHEST
+        time: 5
+        expire: 300 # Expires after 5 minutes
+        permission: '' # set to '' to disable
+        generatorSound:
+            sound: ''
+        hologram:
+        - '&3&l%player%''s &bGenerator'
+        - '&fTier: &f%type%'
+        - '&fGenerates every &b%time% &fseconds!'
+        - '&fExpires in &b%expire%'
+
+# Allows for registering extra commands
+# instead of the standard /ug /gen etc
+#
+# NOTE: YOU MUST RESTART FOR CHANGES TO APPEAR!
+aliases:
+- 'ugenerator'
+
+general:
+    # Height of the Hologram (Whole number)
+    #
+    hologramHeight: 3
+    
+    # Generator Limits #
+    # Perm? unitygen.limit.<value> (Eg unitygen.limit.donator)
+    # Unlimited? Set to -1 | Or permission unitygen.limit.bypass
+    #
+    limit:
+        player: 2
+        donator: 5
+        staff: -1
+
+    useGenProtection: true # Use UnityGen's Gen Protection? (Stops creepers exploding generators)
+         
+    # Generator Interaction #
+    # Where will the item drop?
+    #
+    # TRUE - Item will drop on floor
+    # FALSE - Item will go into players inventory (unless full! otherwise will drop on floor)
+    #
+    generatorItemDrop: true
+    
+    # Allow Hopper Placing?
+    #
+    allowHopper: false
+    
+    # Who can remove a generator?
+    # Available Types:
+    # OWNER - Only the Gen Owner can remove (bypass with unitygen.bypass)
+    # EVERYONE - Anyone can remove it (good for factions)
+    #
+    remove-gen: OWNER
+
+    
+    # Do you wish to allow Generators to be Double Chests?
+    #
+    allowDoubleChest: false
+    tellPlayerWhenFull: true
+    tellPlayerOnGeneration: true
+    
+    # Specify items that if a player holds this and interacts to a generator
+    # it will not remove it and instead allow interaction
+    # - Such as a SIGN, useful for Chest-Shops -
+    allowed-item:
+    - SIGN

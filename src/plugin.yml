@@ -1,0 +1,26 @@
+name: UnityGen
+version: 2.7.6
+main: io.chazza.unitygen.Main
+author: Chazmondo
+description: #1 Quality & Unique Item-Generator plugin!
+softdepend: [PlaceholderAPI, MVdWPlaceholderAPI, QAPlugin]
+     
+permissions:
+   unitygen.reload:
+     default: op
+   unitygen.version:
+     default: op
+   unitygen.give:
+     default: op
+   unitygen.giveall:
+     default: op
+   unitygen.help:
+     default: op
+   unitygen.list:
+     default: op
+   unitygen.limit.bypass:
+     default: op
+   unitygen.bypass:
+     default: op
+   unitygen.check:
+     default: op
